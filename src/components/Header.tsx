@@ -18,19 +18,19 @@ const Header: React.FC = () => {
       <div className="bg-lessDark h-20 w-full absolute top-[-20px] left-0 z-[-1]" />
       <header className="bg-white shadow-md w-full relative">
         <div className='w-full h-10 bg-lessDark flex justify-end'>
-            <div className='w-[100px] bg-white flex justify-center items-center space-x-4 mx-20'>
-                <a href="https://www.instagram.com/your_instagram" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram className="text-2xl text-gray-800 hover:text-gray-600" />
-                </a>
-                <a href="https://www.facebook.com/your_facebook" target="_blank" rel="noopener noreferrer">
-                    <FaFacebook className="text-2xl text-gray-800 hover:text-gray-600" />
-                </a>
-            </div>
+          <div className='w-[6rem] bg-white flex justify-center items-center space-x-4 mx-5'>
+            <a href="https://www.instagram.com/your_instagram" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="text-2xl text-gray-800 hover:text-gray-600" />
+            </a>
+            <a href="https://www.facebook.com/your_facebook" target="_blank" rel="noopener noreferrer">
+              <FaFacebook className="text-2xl text-gray-800 hover:text-gray-600" />
+            </a>
+          </div>
         </div>
-        <div className="w-full px-10 py-4">
+        <div className="w-full px-5 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center">
-              <img src={lwcLogo} alt="LWC Logo" className="h-[80px] w-auto" />
+              <img src={lwcLogo} alt="LWC Logo" className="h-[5rem] w-auto" />
             </Link>
             <div className="flex items-center md:hidden">
               <button onClick={toggleMenu} className="text-gray-600 hover:text-gray-900 focus:outline-none">
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
                 </svg>
               </button>
             </div>
-            <div className="flex items-center gap-[100px]">
+            <div className="flex items-center gap-10">
               <nav className={`md:flex ${isMenuOpen ? 'block' : 'hidden'}`}>
                 <ul className="md:flex md:space-x-6 flex-col md:flex-row space-y-2 md:space-y-0 mt-4 md:mt-0">
                   {[
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                 </ul>
               </nav>
               <div className='ml-4 hidden md:block'>
-                <Link to="/booking" className="bg-dark hover:bg-neutral text-white hover:text-white font-bold py-2 px-4 rounded-[10px] transition duration-300 ease-in-out transform hover:scale-200">
+                <Link to="/booking" className="bg-dark hover:bg-neutral text-white font-bold py-2 px-4 rounded-[0.625rem] transition duration-300 ease-in-out transform hover:scale-105">
                   Book Appointment
                 </Link>
               </div>
