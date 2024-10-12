@@ -5,6 +5,9 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   base: '/lwc-website/',
+  build: {
+    outDir: 'docs'  
+  },
   css: {
     postcss: './postcss.config.js',
   },
