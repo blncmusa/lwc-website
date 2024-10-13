@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import lwcLogo from '../assets/lwc-logo.png';
 import { FaInstagram, FaFacebook } from 'react-icons/fa';
+import { RiAdminLine } from "react-icons/ri";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,11 +19,14 @@ const Header: React.FC = () => {
       <div className="bg-lessDark h-20 w-full absolute top-[-20px] left-0 z-[-1]" />
       <header className="bg-white shadow-md w-full relative">
         <div className='w-full h-10 bg-lessDark flex justify-end'>
-          <div className='w-[6rem] bg-white flex justify-center items-center space-x-4 mx-5'>
-            <a href="https://www.instagram.com/your_instagram" target="_blank" rel="noopener noreferrer">
+          <div className='w-[8rem] bg-white flex justify-center items-center space-x-4 mx-10'>
+            <Link to="/admin">
+              <RiAdminLine className="text-2xl text-gray-800 hover:text-gray-600" />
+            </Link>
+            <a href="https://www.instagram.com/londonwellbeingcare/" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-2xl text-gray-800 hover:text-gray-600" />
             </a>
-            <a href="https://www.facebook.com/your_facebook" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/londonwellbeingcare" target="_blank" rel="noopener noreferrer">
               <FaFacebook className="text-2xl text-gray-800 hover:text-gray-600" />
             </a>
           </div>

@@ -11,12 +11,12 @@ import "../index.css"
 const Home: React.FC = () => {
   return (
     <div>
-    <div className="w-full flex justify-center bg-theme mb-[20rem] relative">
+    <div className="w-full flex justify-center bg-theme mb-[20rem] pb-[100px] relative">
       <main className='flex flex-col md:flex-row w-full items-center justify-center max-w-[70rem] px-4 my-10 pb-[4rem] h-[60vh]'>
         <HeroText/>
         <HeroImage/>
       </main>
-      <section className='absolute flex bottom-[-15rem] justify-center space-x-4'>
+      <section className='absolute flex bottom-[-10rem] justify-center space-x-4'>
         <InfoBubble/>
         <ContactBubble/>
       </section>

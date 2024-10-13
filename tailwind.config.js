@@ -12,6 +12,7 @@ module.exports = {
         neutral: '#415A77',
         light: '#778DA9',
         theme: '#edf6f9',
+        site: "#3cbdec"
       },
     },
   },
