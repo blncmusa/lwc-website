@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                 </ul>
               </nav>
               <div className='ml-4 hidden md:block'>
-                <Link to="/booking" className="bg-dark hover:bg-neutral text-white font-bold py-2 px-4 rounded-[0.625rem] transition duration-300 ease-in-out transform hover:scale-105">
+                <Link to="/booking" className="bg-dark hover:bg-neutral text-white font-bold py-2 px-4 rounded-[0.625rem] transition duration-300 ease-in-out transform hover:scale-105 hover:text-white">
                   Book Appointment
                 </Link>
               </div>

@@ -14,7 +14,7 @@ const HeroText: React.FC = () => {
         </div>
         <Link 
           to="/booking" 
-          className="inline-flex items-center bg-dark hover:bg-neutral text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 w-[40%] mt-10"
+          className="inline-flex items-center bg-dark hover:bg-neutral text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 w-[40%] mt-10 hover:text-white"
         >
           Book Appointment
           <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-white" />
