@@ -69,7 +69,7 @@ const Admin = () => {
             </div>
             <button
                 type="submit"
-                className="w-full bg-site text-white py-2 rounded-lg hover:bg-blue-300 focus:border-none transition-all"
+                className="w-full bg-neutral text-white py-2 rounded-lg hover:bg-black focus:border-none transition-all"
             >
                 Log In
             </button>

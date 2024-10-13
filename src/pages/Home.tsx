@@ -11,7 +11,7 @@ import "../index.css"
 const Home: React.FC = () => {
   return (
     <div>
-    <div className="w-full flex justify-center bg-theme mb-[20rem] pb-[100px] relative">
+    <div className="w-full flex justify-center bg-theme mb-[17rem] pb-[100px] relative">
       <main className='flex flex-col md:flex-row w-full items-center justify-center max-w-[70rem] px-4 my-10 pb-[4rem] h-[60vh]'>
         <HeroText/>
         <HeroImage/>

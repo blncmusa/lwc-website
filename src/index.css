@@ -86,3 +86,28 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* key features */
+.key-feature-container {
+  @apply flex items-start my-7 mr-[100px] 
+}
+
+.key-feature-image {
+ @apply w-[20px] h-[50px] text-black
+}
+
+.key-feature-text {
+  @apply text-[50px]
+}
+
+.key-feature-title {
+  @apply text-black text-[16px] font-light mb-2
+}
+
+.key-feature-description {
+  @apply font-thin text-sm text-black
+}
+
+.icon-container {
+  @apply border px-4 rounded-md mr-5 shadow-md
+}

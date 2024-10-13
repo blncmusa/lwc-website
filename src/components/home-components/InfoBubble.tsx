@@ -11,12 +11,12 @@ export default function InfoBubble() {
   ];
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-xl max-w-[90%] md:max-w-[50%] flex flex-col justify-between h-[300px] md:min-w-[722px]">
-      <h2 className="text-xl md:text-2xl font-bold mb-2 text-black">Your Health, Our Priority: How We Can Help?</h2>
+    <div className="p-6 bg-white rounded-lg shadow-xl max-w-[90%] md:max-w-[50%] flex flex-col justify-start gap-6 h-[300px] md:min-w-[722px]">
+      <h2 className="text-xl md:text-2xl text-black">From GP Consultations to Specialist Care. We’re Here to Help:</h2>
       <div className="flex flex-col md:flex-row">
         <div className="md:w-1/2 md:pr-4">
-          <p className="text-black mb-4 font-extralight text-base md:text-lg">
-            Whether you need routine healthcare or specialized medical advice, we are here to help. Our services are designed to provide quick access to trusted GPs, tailored medical care, and health support at your convenience.
+          <p className="text-black mb-6 font-thin text-base md:text-lg">
+            Whether you need routine healthcare or specialised medical advice, we are here to help. Our services are designed to provide quick access to trusted GPs, tailored medical care, and health support at your convenience.
           </p>
           <a href="/services" className="text-blue-500 hover:text-blue-700 font-semibold">
             Explore Services ➞
