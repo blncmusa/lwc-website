@@ -89,7 +89,7 @@ button:focus-visible {
 
 /* key features */
 .key-feature-container {
-  @apply flex items-start my-7 mr-[100px] 
+  @apply flex items-start my-3 mr-[100px] 
 }
 
 .key-feature-image {
@@ -101,7 +101,7 @@ button:focus-visible {
 }
 
 .key-feature-title {
-  @apply text-black text-[16px] font-light mb-2
+  @apply text-black text-[16px] font-medium mb-1
 }
 
 .key-feature-description {
@@ -109,5 +109,5 @@ button:focus-visible {
 }
 
 .icon-container {
-  @apply border px-4 rounded-md mr-5 shadow-md
+  @apply border px-4 rounded-md mr-5
 }

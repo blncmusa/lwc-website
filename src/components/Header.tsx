@@ -3,16 +3,36 @@ import { Link, useLocation } from 'react-router-dom';
 import lwcLogo from '../assets/lwc-logo.png';
 import { FaInstagram, FaFacebook } from 'react-icons/fa';
 import { RiAdminLine } from "react-icons/ri";
+import { useScrollStore } from "../store/scrollStore";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const scrollToAbout = useScrollStore((state) => state.scrollToAbout);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/' && !location.hash;
+    }
+    if (path === 'about') {
+      return location.hash === '#sectionAbout';
+    }
+    return location.pathname === path;
+  };
+
+  const handleAboutClick = () => {
+    if (location.pathname === '/') {
+      // Scroll to the About section if already on the homepage
+      scrollToAbout();
+    } else {
+      // Navigate to the homepage, then scroll
+      window.location.href = "/#sectionAbout";
+    }
+  };
 
   return (
     <>
@@ -52,21 +72,32 @@ const Header: React.FC = () => {
                 <ul className="md:flex md:space-x-6 flex-col md:flex-row space-y-2 md:space-y-0 mt-4 md:mt-0">
                   {[
                     { path: '/', label: 'Home' },
-                    { path: '/about', label: 'About' },
+                    { path: 'about', label: 'About' },
                     { path: '/booking', label: 'Booking' },
                     { path: '/contact', label: 'Contact' },
                     { path: '/pricing', label: 'Pricing' },
                     { path: '/services', label: 'Services' },
                   ].map(({ path, label }) => (
                     <li key={path} className="select-none">
-                      <Link
-                        to={path}
-                        className={`text-gray-600 hover:text-gray-900 block ${
-                          isActive(path) ? 'font-bold' : 'font-extralight'
-                        }`}
-                      >
-                        {label}
-                      </Link>
+                      {label === 'About' ? (
+                        <span
+                          onClick={handleAboutClick}
+                          className={`cursor-pointer text-gray-600 hover:text-gray-900 block ${
+                            isActive('about') ? 'font-bold' : 'font-extralight'
+                          }`}
+                        >
+                          {label}
+                        </span>
+                      ) : (
+                        <Link
+                          to={path}
+                          className={`text-gray-600 hover:text-gray-900 block ${
+                            isActive(path) ? 'font-bold' : 'font-extralight'
+                          }`}
+                        >
+                          {label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

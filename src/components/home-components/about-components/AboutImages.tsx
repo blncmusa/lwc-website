@@ -5,7 +5,7 @@ import Image3 from "../../../assets/doctor-xray.jpg"
 
 export default function AboutImages() {
   return (
-    <div className="grid grid-rows-2 grid-cols-2 gap-3 w-full h-[100%]">
+    <div className="grid grid-rows-2 grid-cols-2 gap-3 w-full h-[100%] pb-[120px]">
       <div className="col-span-1">
         <img src={Image1} alt="Doctor Board" className="w-full h-auto rounded-lg" style={{ display: 'block' }} />
       </div>
